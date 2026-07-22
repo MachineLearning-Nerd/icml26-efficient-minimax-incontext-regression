@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "title": "Repro - Efficient and Minimax Optimal In-context Nonparametric Regression with Transformers",
+  "emoji": "🎯",
+  "space_id": null,
+  "paper": {
+    "arxiv_id": "2601.15014",
+    "openreview_id": "3hD1gzThtY",
+    "title": "Efficient and Minimax Optimal In-context Nonparametric Regression with Transformers"
+  },
+  "tags": [
+    "icml2026-repro",
+    "paper-3hD1gzThtY"
+  ],
+  "updated_at": "2026-07-22T12:37:52+00:00",
+  "root": {
+    "slug": "index",
+    "title": "Repro - Efficient and Minimax Optimal In-context Nonparametric Regression with Transformers",
+    "file": "pages/index.md",
+    "children": [
+      {
+        "slug": "overview",
+        "title": "Overview",
+        "file": "pages/overview/page.md",
+        "children": []
+      },
+      {
+        "slug": "conclusion",
+        "title": "Conclusion",
+        "file": "pages/conclusion/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-c1-local-polynomial-rate",
+        "title": "Claim C1 — local polynomial rate",
+        "file": "pages/claim-c1-local-polynomial-rate/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-c2-transformer-approximation",
+        "title": "Claim C2 — transformer approximation",
+        "file": "pages/claim-c2-transformer-approximation/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-c3-erm-minimax-rate",
+        "title": "Claim C3 — ERM minimax rate",
+        "file": "pages/claim-c3-erm-minimax-rate/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-c4-parameter-count-mismatch",
+        "title": "Claim C4 — parameter count mismatch",
+        "file": "pages/claim-c4-parameter-count-mismatch/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-c5-pretraining-requirement",
+        "title": "Claim C5 — pretraining requirement",
+        "file": "pages/claim-c5-pretraining-requirement/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-c6-monomial-basis-gd-construction",
+        "title": "Claim C6 — monomial-basis GD construction",
+        "file": "pages/claim-c6-monomial-basis-gd-construction/page.md",
+        "children": []
+      },
+      {
+        "slug": "methods",
+        "title": "Methods",
+        "file": "pages/methods/page.md",
+        "children": []
+      },
+      {
+        "slug": "negative-controls",
+        "title": "Negative controls",
+        "file": "pages/negative-controls/page.md",
+        "children": []
+      },
+      {
+        "slug": "tests-and-gate",
+        "title": "Tests and gate",
+        "file": "pages/tests-and-gate/page.md",
+        "children": []
+      }
+    ]
+  },
+  "agent_view_tokens": 1379,
+  "revision": "1784723872140702306"
+}

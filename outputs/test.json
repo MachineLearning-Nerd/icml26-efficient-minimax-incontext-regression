@@ -1,0 +1,34 @@
+{
+  "paper": "3hD1gzThtY",
+  "source_sha256": "7a8f12e4f42513a87ce747648cecb00a0fac21a9979b3035c49c7b7b3c57d7f4",
+  "claims": {
+    "C1": {
+      "status": "verified",
+      "local_polynomial_cells": 36,
+      "max_abs_error": 0.015406003118763223
+    },
+    "C2": {
+      "status": "verified",
+      "gd_cells": 36,
+      "max_gd_gap": 1.6708805450349473e-09
+    },
+    "C3": {
+      "status": "verified",
+      "rate_cells": 24
+    },
+    "C4": {
+      "status": "falsified",
+      "source": "L=ceil(C log(en)), B=C n^2"
+    },
+    "C5": {
+      "status": "verified",
+      "rate_cells": 24
+    },
+    "C6": {
+      "status": "verified",
+      "basis_and_gd_cells": 36
+    }
+  },
+  "verified_claims": 5,
+  "falsified_claims": 1
+}
