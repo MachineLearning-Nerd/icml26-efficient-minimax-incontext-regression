@@ -18,8 +18,8 @@ Author code exists (`tianyima2000/ICL_LocPol`, GPU PyTorch, 50k AdamW steps on A
 <!-- trackio-cell
 {"type": "markdown", "id": "m2", "created_at": "2026-07-25T00:00:00+00:00", "title": "Run"}
 -->
-**Fixed command (every node):** `bash repro/ci.sh   # -> uv sync --frozen && uv run python -m repro.run`
+**Fixed command (every node):** `bash repro/ci.sh   # -> uv sync --frozen && uv run python repro/src/run_publication_gate.py`
 
 **Pinned env:** uv, Python 3.12.11, numpy 2.5, scipy 1.18, pandas 2.3, matplotlib 3.11 (uv.lock pinned)
 
-**Source:** https://github.com/MachineLearning-Nerd/icml26-repro-3hD1gzThtY-incontext-nonparametric (branch `orx/erm-rate-c3` @ `7b5707f`, mirrored to `main`).
+**Source:** https://github.com/MachineLearning-Nerd/icml26-efficient-minimax-incontext-regression (branch `main`).

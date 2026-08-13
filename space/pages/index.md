@@ -1,6 +1,9 @@
 # Repro - Efficient and Minimax Optimal In-context Nonparametric Regression with Transformers
 
-**Status: 6/6 claims VERIFIED** (C1, C2, C4, C5, C6 HIGH · C3 MEDIUM). Prior judged score: 2/12 (toy-only).
+**Scoped status: 6/6 claim contracts pass** (C1, C2, C4, C5, C6 HIGH · C3 MEDIUM).
+Paper-level status: **INCONCLUSIVE**; `VERIFIED` means verified within the
+executable audit scope, not foundationally formalized. Prior judged score: 2/12
+(toy-only).
 
 ![headline rate](images/fig1_locpol_rate.png)
 
@@ -19,5 +22,5 @@ Each claim page below shows the exact statement, the audited source anchors, an 
 | [Claim C6 — monomial-basis GD construction](#/claim-c6-monomial-basis-gd-construction) | **VERIFIED · HIGH** |
 | [Methods](#/methods) | faithful NumPy reconstruction |
 | [Negative controls](#/negative-controls) | controls fail as intended |
-| [Conclusion](#/conclusion) | forecast 10–12/12 |
+| [Conclusion](#/conclusion) | scope and limitations |
 | [Tests and gate](#/tests-and-gate) | fail-closed gate, exit non-zero on failure |

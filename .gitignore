@@ -1,4 +1,6 @@
 .venv/
 __pycache__/
 .pytest_cache/
-outputs/
+outputs/*
+!outputs/
+!outputs/publication_gate.json

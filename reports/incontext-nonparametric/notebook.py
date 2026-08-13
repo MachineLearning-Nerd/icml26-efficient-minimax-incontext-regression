@@ -14,7 +14,7 @@ __generated_with = "0.13.15"
 app = marimo.App(width="medium", css_file="")
 
 FIG = ("https://raw.githubusercontent.com/MachineLearning-Nerd/"
-       "icml26-repro-3hD1gzThtY-incontext-nonparametric/main/reports/"
+       "icml26-efficient-minimax-incontext-regression/main/reports/"
        "incontext-nonparametric/images")
 
 
@@ -37,8 +37,10 @@ def _(mo):
         least-squares problem.
 
         This notebook opens with the reproduction's headline result, then walks
-        through how every claim was verified. **All 6 claims: VERIFIED**
-        (5 HIGH, 1 MEDIUM).
+        through how every scoped claim was verified. **6/6 scoped claim
+        contracts pass** (5 HIGH, 1 MEDIUM). Paper-level status is
+        **INCONCLUSIVE**: the global ERM, cited lower bounds, and GPU training
+        dynamics are outside this audit.
         """
     )
     return
@@ -209,9 +211,9 @@ def _(mo):
         | C6 | ReLU-FFN basis + linear-attention GD | **VERIFIED** | HIGH |
 
         Full evidence, raw CSV/JSON, negative controls, and limitations: see the
-        [illustrated report](https://github.com/MachineLearning-Nerd/icml26-repro-3hD1gzThtY-incontext-nonparametric/blob/main/reports/incontext-nonparametric/report.md)
+        [illustrated report](https://github.com/MachineLearning-Nerd/icml26-efficient-minimax-incontext-regression/blob/main/reports/incontext-nonparametric/report.md)
         and the claim verifiers under `repro/claims/`. Reproduce with
-        `uv run python -m repro.run`.
+        `bash repro/ci.sh`.
         """
     )
     return

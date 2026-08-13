@@ -11,11 +11,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs" / "claims"
-GIT_SHA = "7b5707f"  # erm-rate-c3 tip (the verified branch); main mirror noted in pages
+GIT_SHA = "main"  # publication surface
 SEEDS = "fixed per cell (see claim modules): C1 seeds 10_000+, C2 seeds 9_000+, C3 seeds 7_000+"
 ENV = "uv, Python 3.12.11, numpy 2.5, scipy 1.18, pandas 2.3, matplotlib 3.11 (uv.lock pinned)"
-CMD = "bash repro/ci.sh   # -> uv sync --frozen && uv run python -m repro.run"
-SRC = "https://github.com/MachineLearning-Nerd/icml26-repro-3hD1gzThtY-incontext-nonparametric"
+CMD = "bash repro/ci.sh   # -> uv sync --frozen && uv run python repro/src/run_publication_gate.py"
+SRC = "https://github.com/MachineLearning-Nerd/icml26-efficient-minimax-incontext-regression"
 
 CLAIMS = {
     "c1": ("claim-c1-local-polynomial-rate", "C1", OUT / "c1_locpol_rate.json"),
@@ -53,12 +53,12 @@ def _common(res, claim_id, csv_files) -> str:
 {anchors}
 
 **Executable verifier & fixed command:**
-- Code: [`repro/claims/{_mod(claim_id)}.py`]({SRC}/blob/orx/erm-rate-c3/repro/claims/{_mod(claim_id)}.py)
+- Code: [`repro/claims/{_mod(claim_id)}.py`]({SRC}/blob/main/repro/claims/{_mod(claim_id)}.py)
 - Command (identical on every node): `{CMD}`
 - The verifier exits **non-zero** if any of its checks fail (`repro/run.py` gate).
 
 **Pinned environment:** {ENV}
-**Branch / Git SHA:** `orx/erm-rate-c3` @ `{GIT_SHA}` (mirrored to `main`).
+**Branch / Git SHA:** `{GIT_SHA}`.
 **Seeds:** {SEEDS}
 **Compute:** local CPU for symbolic checks; Hugging Face `cpu-upgrade` (image `python:3.12`) for multi-core sweeps. Verifier runtime (s): {res.get('metrics', {}).get('runtime_seconds', 'n/a')}.
 
@@ -104,8 +104,10 @@ def build(target: Path):
 
     # ---- overview ----
     ov = _page("Overview", [_cell("ov", "Outcome",
-        "All six claims are **VERIFIED** by executable verifiers (C1, C2, C4, C5, C6 HIGH; "
-        "C3 MEDIUM), up from the prior judged score of 2/12 (toy-only). Each claim page below "
+        "All six claim contracts pass executable verifiers (C1, C2, C4, C5, C6 HIGH; "
+        "C3 MEDIUM), up from the prior judged score of 2/12 (toy-only). Paper-level status is "
+        "**INCONCLUSIVE** because the audit does not solve the global ERM, reprove cited lower "
+        "bounds, or reproduce GPU training dynamics. Each claim page below "
         "shows the exact statement, source anchors, the verifier with its checks, a negative "
         "control, raw CSV evidence, the fixed command, pinned environment, Git SHA, seeds and "
         "compute. Source integrity (arXiv tarball SHA-256 `7a8f12e4…3c57d7f4`) is asserted at "
@@ -135,7 +137,7 @@ def build(target: Path):
         "risk-decomposition route (the global ERM is intractable and the paper states training "
         "dynamics are out of scope)."), _cell("m2", "Run",
         f"**Fixed command (every node):** `{CMD}`\n\n**Pinned env:** {ENV}\n\n"
-        f"**Source:** {SRC} (branch `orx/erm-rate-c3` @ `{GIT_SHA}`, mirrored to `main`).")])
+        f"**Source:** {SRC} (branch `{GIT_SHA}`).")])
     (target / "methods").mkdir(exist_ok=True)
     (target / "methods" / "page.md").write_text(meth)
 
@@ -181,8 +183,8 @@ def build(target: Path):
         "VERIFIED with HIGH confidence and negative controls. The transformer construction's "
         "O(1/n) approximation (C2) is VERIFIED by building the actual transformer. The ERM rate "
         "(C3) is VERIFIED at MEDIUM via the paper's risk decomposition (the global ERM is "
-        "intractable, as the paper notes).\n\n"
-        "Forecast (not a judge result): conservative 10–12/12; best-supported 12/12.")])
+        "intractable, as the paper notes). Paper-level status remains **INCONCLUSIVE**; no "
+        "judge-score forecast is made.")])
     (target / "conclusion").mkdir(exist_ok=True)
     (target / "conclusion" / "page.md").write_text(cc)
 

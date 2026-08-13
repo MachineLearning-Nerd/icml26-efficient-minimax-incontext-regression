@@ -15,7 +15,10 @@ tags:
 
 # Repro - Efficient and Minimax Optimal In-context Nonparametric Regression with Transformers
 
-**6/6 claims VERIFIED** (C1, C2, C4, C5, C6 HIGH · C3 MEDIUM). Prior judged score: 2/12.
+**Scoped reproduction: 6/6 claim contracts pass** (C1, C2, C4, C5, C6 HIGH · C3 MEDIUM).
+Paper-level status is **INCONCLUSIVE**: these labels describe executable
+claim checks, not a foundational proof formalization, exact global ERM solve,
+or reproduction of GPU training. Prior judged score: 2/12.
 
 An open experiment logbook, published with [Trackio](https://github.com/gradio-app/trackio).
 Each claim page shows the exact statement, audited source anchors, an executable

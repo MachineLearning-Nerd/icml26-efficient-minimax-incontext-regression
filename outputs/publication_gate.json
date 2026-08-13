@@ -1,0 +1,33 @@
+{
+  "paper": "3hD1gzThtY",
+  "gate": "scoped_claims_passed",
+  "tests_passed": true,
+  "publication_gate_passed": true,
+  "overall_status": "INCONCLUSIVE",
+  "scoped_claims_supported": 6,
+  "scoped_claims_total": 6,
+  "paper_claims_verified": 0,
+  "paper_claims_total": 6,
+  "falsified_claims": 0,
+  "blocked_claims": 0,
+  "current_claim_verdicts": {
+    "C1": "VERIFIED",
+    "C2": "VERIFIED",
+    "C3": "VERIFIED",
+    "C4": "VERIFIED",
+    "C5": "VERIFIED",
+    "C6": "VERIFIED"
+  },
+  "claim_confidence": {
+    "C1": "HIGH",
+    "C2": "HIGH",
+    "C3": "MEDIUM",
+    "C4": "HIGH",
+    "C5": "HIGH",
+    "C6": "HIGH"
+  },
+  "source_sha256": "7a8f12e4f42513a87ce747648cecb00a0fac21a9979b3035c49c7b7b3c57d7f4",
+  "evidence": "outputs/claims.json",
+  "command": "bash repro/ci.sh",
+  "status_note": "Six scoped claim contracts pass; the audit is not a foundational proof-assistant formalization and does not reproduce GPU training dynamics or solve the global ERM exactly."
+}

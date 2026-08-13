@@ -35,12 +35,12 @@ All three named mechanisms are implemented and verified: (A) the kernel K=(1-||x
 - appendix sec:transformer_construction
 
 **Executable verifier & fixed command:**
-- Code: [`repro/claims/c6_construction_components.py`](https://github.com/MachineLearning-Nerd/icml26-repro-3hD1gzThtY-incontext-nonparametric/blob/orx/erm-rate-c3/repro/claims/c6_construction_components.py)
-- Command (identical on every node): `bash repro/ci.sh   # -> uv sync --frozen && uv run python -m repro.run`
+- Code: [`repro/claims/c6_construction_components.py`](https://github.com/MachineLearning-Nerd/icml26-efficient-minimax-incontext-regression/blob/main/repro/claims/c6_construction_components.py)
+- Command (identical on every node): `bash repro/ci.sh   # -> uv sync --frozen && uv run python repro/src/run_publication_gate.py`
 - The verifier exits **non-zero** if any of its checks fail (`repro/run.py` gate).
 
 **Pinned environment:** uv, Python 3.12.11, numpy 2.5, scipy 1.18, pandas 2.3, matplotlib 3.11 (uv.lock pinned)
-**Branch / Git SHA:** `orx/erm-rate-c3` @ `7b5707f` (mirrored to `main`).
+**Branch / Git SHA:** `main` (publication surface).
 **Seeds:** fixed per cell (see claim modules): C1 seeds 10_000+, C2 seeds 9_000+, C3 seeds 7_000+
 **Compute:** local CPU for symbolic checks; Hugging Face `cpu-upgrade` (image `python:3.12`) for multi-core sweeps. Verifier runtime (s): 0.011.
 

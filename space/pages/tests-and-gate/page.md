@@ -5,7 +5,7 @@
 <!-- trackio-cell
 {"type": "markdown", "id": "tg1", "created_at": "2026-07-25T00:00:00+00:00", "title": "Fail-closed gate"}
 -->
-The single fixed command `bash repro/ci.sh` runs `uv sync --frozen` then `uv run python -m repro.run`, which:
+The single fixed command `bash repro/ci.sh` runs `uv sync --frozen` then `uv run python repro/src/run_publication_gate.py`, which runs `uv run python -m repro.run` and:
 1. asserts the arXiv source tarball SHA-256 (`7a8f12e4…3c57d7f4`) and the per-file LaTeX hashes;
 2. runs every claim verifier (`repro/claims/c*.py`);
 3. writes `outputs/claims/*.json` and raw CSVs;
